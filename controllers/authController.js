@@ -3,8 +3,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const login = async (req, res) => {
+  console.log("Login Called")
   const { name, password } = req.body;
-
   try {
     const user = await User.findOne({ name });
     if (!user) return res.status(400).json({ message: 'User not found' });
