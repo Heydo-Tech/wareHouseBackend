@@ -11,8 +11,13 @@ const cors = require('cors');
 dotenv.config();
 connectDB();
 
+const allowedOrigins = [
+  "https://warehouse.apnimandi.us",
+  "https://discount.apnimandi.us"
+]
+
 const app = express();
-app.use(cors());
+app.use(cors({origin: allowedOrigins));
 app.use(express.json());
 
 app.get('/', (req, res) => {
