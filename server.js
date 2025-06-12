@@ -17,7 +17,7 @@ const allowedOrigins = [
 ]
 
 const app = express();
-app.use(cors({origin: allowedOrigins));
+app.use(cors({origin: allowedOrigins}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
