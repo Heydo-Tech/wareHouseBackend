@@ -31,4 +31,4 @@ jobs:
             cd /root/warehouse.apnimandi.us/wareHouseBackend
             git pull https://${{ secrets.TOKEN }}:${{ secrets.TOKEN }}@github.com/Heydo-Tech/wareHouseBackend.git
             npm install --force
-            pm2 reload 45 --update-env
+            pm2 reload 'warehouse-backend' --update-env
